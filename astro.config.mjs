@@ -28,7 +28,7 @@ export default defineConfig(
         },
       ],
     },
-    site: 'https://daisy-blog-psi.vercel.app/',
+    site: 'https://art.xieyaxin.top/',
     integrations: [sitemap()],
   }
 );

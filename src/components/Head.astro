@@ -1,8 +1,5 @@
 ---
-const siteInfo = {
-  siteName: 'Daisy Blog',
-  siteDesc: 'This is a simple blog',
-}
+import { siteInfo } from "@data/site"
 
 let {title} = Astro.props;
 let {desc} = Astro.props;
@@ -34,6 +31,7 @@ if(!img) {
 	{title && <meta name="twitter:title" content={title} />}
 	{desc && <meta name="twitter:description" content={desc} />}
 	<meta name="twitter:image" content={img} />
+	{siteInfo.icon && <link rel="icon" type="image/ico" href={siteInfo.icon}>}
 	{title && <meta name="twitter:image:alt" content={title} />}
 	{twitterUsername && <meta name="twitter:site" content={twitterUsername}/>}
 	{twitterUsername && <meta name="twitter:creator" content={twitterUsername}/>}
