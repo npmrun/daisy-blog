@@ -2,7 +2,7 @@
 title: 时间会冲淡一切
 date: 2022-04-09
 author: Pouya
-desc: Laudantium iste repellat et. Et officiis corporis. At est placeat voluptas aut. Soluta dolor quae quae tempora. Voluptatibus quibusdam natus. Facilis ea repellendus expedita voluptatum rerum autem.
+desc: 时间会冲淡一切的不公
 img: https://api.lorem.space/image/furniture?w=800&h=500
 imgWidth: 800
 imgHeight: 500
