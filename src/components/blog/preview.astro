@@ -3,16 +3,18 @@ import type { Post } from '@data/post';
 const post: Post = Astro.props.post
 ---
 
-<div class="py-6 flex flex-row-reverse gap-6 md:gap-10 items-start">
+<div class="p-6 my-6 flex flex-row-reverse gap-6 md:gap-10 items-start relative overflow-hidden rounded-lg">
+<img class="absolute top-1/2 bottom-0 left-1/2 w-full right-0 blur-xl scale-110 -translate-x-1/2 -translate-y-1/2" src={post.img} alt="" />
+<div class="absolute left-0 right-0 top-0 bottom-0 bg-black opacity-20"></div>
 	{post.img &&
-		<a href={`/${post.slug}`} class="shrink-0">
-			<img src={post.img} alt={post.title} width="160" height="160" class="w-20 h-20 md:w-40 md:h-40 rounded bg-base-200 object-cover" />
+		<a href={`/${post.slug}`} class="shrink-0" style="z-index: 1;">
+			<img src={post.img} alt={post.title} width="160" height="160" class="w-20 h-20 md:w-40 md:h-40 rounded bg-base-200 object-cover rounded-lg" />
 		</a>
 	}
-	<div class="flex flex-col gap-4 flex-1 w-0">
-		<h2 class="text-2xl font-bold">
+	<div class="flex flex-col gap-4 flex-1 w-0 z-1" style="z-index: 1;">
+		<h2 class="text-2xl font-bold text-white">
 			<a class="hover:underline" href={`/${post.slug}`}>{post.title}</a>
 		</h2>
-		<p class="text-sm text-base-content/70">{post.desc}</p>
+		<p class="text-sm text-base-content/70 text-white">{post.desc}</p>
 	</div>
 </div>
