@@ -35,17 +35,17 @@ export function published(posts: MarkdownInstance[]): Post[] {
     .sort((a, b) => b.timestamp - a.timestamp);
 }
 
-export function getRSS(posts: MarkdownInstance[]) {
-  return {
-    title: siteInfo.siteName,
-    description: siteInfo.siteDesc,
-    stylesheet: true,
-    customData: `<language>${siteInfo.lang || 'en-us'}</language>`,
-    items: published(posts).map((post: Post) => ({
-      title: post.title,
-      description: post.desc,
-      link: post.slug,
-      pubDate: post.date,
-    })),
-  };
-}
+// export function getRSS(posts: MarkdownInstance[]) {
+  // return {
+  //   title: siteInfo.siteName,
+  //   description: siteInfo.siteDesc,
+  //   stylesheet: true,
+  //   customData: `<language>${siteInfo.lang || 'en-us'}</language>`,
+  //   items: published(posts).map((post: Post) => ({
+  //     title: post.title,
+  //     description: post.desc,
+  //     link: post.slug,
+  //     pubDate: post.date,
+  //   })),
+  // };
+// }

@@ -1,14 +1,11 @@
 ---
 import Blog from "@layouts/blog";
 import Date from "@components/utilities/Date";
-import { published, getRSS } from "@data/post"
-import rss from '@astrojs/rss';
+import { published } from "@data/post"
 
 export async function getStaticPaths() {
-	const markdownFiles = await Astro.glob('../content/**/*.md');
+	const markdownFiles = await Astro.glob('./blog/**/*.md');
 	const posts = published( markdownFiles );
-
-	rss(getRSS(markdownFiles))
 
 	return posts.map((post) => {
 		return {
