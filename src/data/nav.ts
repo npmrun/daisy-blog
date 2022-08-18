@@ -1,3 +1,5 @@
+export const title = 'Daisy blog';
+
 export const nav = [
   {
     title: 'About',
@@ -7,4 +9,4 @@ export const nav = [
     title: 'Contact',
     slug: '/contact',
   },
-]
+];
